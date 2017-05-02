@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-navbar color="secondary">
+  
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="close-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+          <div align="center">
+     <img class="card__text4"  [src]="_data.photoURL" >
+      
+     <p (click)="gotophotoedit()">Edit Photo</p>
+     </div>
+  <ion-list >
+   
+
+    <ion-item color="secondary" (click)="updateName()">
+      <ion-grid>
+        <ion-row>
+          <ion-col width-50>
+            Name
+          </ion-col>
+          <ion-col *ngIf="userProfile?.displayName">
+            {{userProfile?.displayName}} 
+          </ion-col>
+          <ion-col class="placeholder-profile" *ngIf="!userProfile?.displayName">
+            <span>
+              Tap here to edit.
+            </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+     <ion-item color="secondary">
+      <ion-grid>
+        <ion-row>
+          <ion-col width-50>
+            User ID
+          </ion-col>
+          <ion-col *ngIf="_data.userid || _data.userid">
+            {{_data.userid}} 
+          </ion-col>
+          
+        </ion-row>
+      </ion-grid>
+    </ion-item>   
+    
+    <ion-item color="secondary">
+       <ion-label class="dob-label">Date of Birth</ion-label>
+      <ion-datetime displayFormat="MMM D, YYYY" pickerFormat="D MMM YYYY"
+        [(ngModel)]="birthDate" (ionChange)="updateDOB(birthDate)"></ion-datetime>
+    </ion-item>
+
+ 
+        <ion-item (click)="updateEmail()" color="secondary">
+      <ion-grid>
+        <ion-row>
+          <ion-col width-50>
+            Email
+          </ion-col>
+          <ion-col width-50 *ngIf="userProfile?.email">
+            {{userProfile?.email}}
+          </ion-col>
+          <ion-col class="placeholder-profile" *ngIf="!userProfile?.email">
+            <span>
+              Tap here to edit.
+            </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+     <ion-item (click)="updatePassword()" color="secondary">
+      <ion-grid>
+        <ion-row>
+          <ion-col width-50>
+            Password
+          </ion-col>
+          <ion-col class="placeholder-profile">
+            <span>
+              Tap here to edit.
+            </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+  </div>
+</ion-content>

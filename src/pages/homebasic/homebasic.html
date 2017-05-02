@@ -1,0 +1,141 @@
+<ion-header>
+   <ion-navbar color="primary" hideBackButton>
+     <div >
+       <ion-icon   style="font-size: 200%;" name="no_wifi" ></ion-icon>
+     <span style="color:white">INTERNET CONNECTION NOT READY..</span>
+    </div>
+  <!--ion-card-content>
+      0.0.0.2
+    </ion-card-content>
+     <button full ion-button (click)="checkForUpdate()">Check for Updates</button-->
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div>
+      <div class="card effect__click">
+        <div class="card__front" style="background-color:rgba(0,0,0,0)">
+          <img src="cardfront.svg" alt="Lights" height="autox" width="100%">
+          <img class="card__text4"  [src]="_data.photoURL">
+
+             <span class="card__text">1023 4345 1177</span>
+          <span class="card__text2">Alvin Tan</span>
+        </div>
+
+        <div class="card__back" style="background-color:rgba(0,0,0,0)">
+    <qr-code  class="card__text3" [value]="'All QR Code data goes here!'" [size]="116"></qr-code>
+
+          <img src="cardback.svg" height="auto" width="100%">
+       
+        </div>
+      </div>
+      
+        <ion-grid>
+  <ion-row>
+    <ion-col style="color:#FFFFB2;background-color:rgba(0,0,0,0)"  width-70>CROWN<br/>712</ion-col>
+     
+           <ion-col style="color:#FFFFB2;background-color:rgba(0,0,0,0)" >
+           <button class="aaa" style="color:#FFFFB2;background-color:rgba(0,0,0,0)" (click)="gototranhis()" ion-button outline item-right icon-left>
+           TRANSACTION<br/> HISTORY
+           </button>
+        </ion-col>
+</ion-row>
+
+</ion-grid>
+    </div>
+
+        <ion-grid>
+    
+  <ion-row>
+    <ion-col style="color:#FFFFB2;background-color:rgba(0,0,0,0)"  width-40> <strong>PERPETUAL CROWN
+          </strong></ion-col>
+       <ion-col style="color:#FFFFB2;background-color:rgba(0,0,0,0)"    width-60>
+356
+        
+        </ion-col>
+</ion-row>
+<hr>
+<ion-row>
+    <ion-col style="color:#FFFFB2;background-color:rgba(0,0,0,0)"  width-40> <strong>USED CROWN
+          </strong></ion-col>
+       <ion-col style="color:#FFFFB2;background-color:rgba(0,0,0,0)"    width-60>
+356
+        
+        </ion-col>
+         
+</ion-row>
+  <hr>
+<ion-row>
+    <ion-col style="color:#FFFFB2;background-color:rgba(0,0,0,0)" width-40> <strong>EXPIRING CROWN
+          </strong></ion-col>
+       <ion-col style="color:#FFFFB2;background-color:rgba(0,0,0,0)"    width-60>
+356
+        
+        </ion-col>
+       
+</ion-row>
+     <hr> 
+</ion-grid>
+
+
+<ion-icon class="tab-button-icon icon icon-md ion-md-myhome" role="img" aria-label="myhome" ng-reflect-is-active="true">
+</ion-icon>
+<span class="tab-button-text">crop</span>
+
+
+<ion-footer >
+ 
+     
+ 
+    
+
+  <table>
+    <tr>
+ 
+  
+
+        <td class="button">
+
+           <ion-title (click)="gogo()"  class="button" style="vertical-align: top;text-align: center;" no-border>
+       <ion-icon   style=" font-size: 1.8em" class="myColor" name="present"></ion-icon>
+      <span class="myColor" style='display: block;font-size: 0.6em'>crop</span> 
+    </ion-title>
+    </td>
+   
+    <td class="button">
+
+           <ion-title (click)="gogo()"  class="button" style="vertical-align: top;text-align: center;" no-border>
+       <ion-icon   style=" font-size: 1.8em" class="myColor" name="home"></ion-icon>
+      <span class="myColor" style='display: block;font-size: 0.6em'>crop</span> 
+    </ion-title>
+    </td>
+
+       <td class="button">
+
+           <ion-title (click)="gogo()"  class="button" style="vertical-align: top;text-align: center;" no-border>
+       <ion-icon   style=" font-size: 1.8em" class="myColor" name="home"></ion-icon>
+      <span class="myColor" style='display: block;font-size: 0.6em'>crop</span> 
+    </ion-title>
+    </td>
+          <td class="button">
+
+           <ion-title (click)="gogo()"  class="button" style="vertical-align: top;text-align: center;" no-border>
+       <ion-icon   style=" font-size: 1.8em" class="myColor" name="home"></ion-icon>
+      <span class="myColor" style='display: block;font-size: 0.6em'>crop</span> 
+    </ion-title>
+    </td>
+    </tr>
+</table>
+
+
+
+
+ 
+</ion-footer>
+
+
+
+</ion-content>
+
+
+

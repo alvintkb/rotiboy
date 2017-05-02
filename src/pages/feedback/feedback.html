@@ -1,0 +1,50 @@
+<ion-header>
+ <ion-navbar color="primary" >
+     <credituser></credituser>
+   
+  
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content padding>
+
+ <h6>Contact Us</h6>
+<p>
+Rotiboy Bakeshoppe Sdn Bhd(470777-K)<br/>
+
+Lot 159, Jalan Industri 2/2<br/>
+Rawang Integrated Industrial Park<br/>
+800 Rawang Selangor Darul Ehsan<br/>
+Malaysia<br/>
+
+
+<ion-grid >
+
+
+  
+  <ion-row >
+    <ion-col style="background-color: blue" width-50>telephone</ion-col>
+    <ion-col style="background-color: blue" width-50>facsimile</ion-col>
+   </ion-row>
+    <ion-row>
+          <ion-col width-50>+603 6091 7202</ion-col>
+            <ion-col width-50>+603 6091 9202</ion-col>
+  </ion-row>
+   <ion-row>
+             <ion-col width-50>+602 6091 7203</ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-icon name="logo-facebook"></ion-icon>&nbsp;RotiboyMalaysia<br/>
+www.rotiboy.com.my
+</p>
+   <h6>&nbsp;Feedback</h6> 
+<ion-textarea [(ngModel)]="msg" rows="4">
+
+  </ion-textarea>
+<div align="center">
+  <img src="submit.svg" (click)="presentToast()" width="20%">
+  </div>
+</ion-content>

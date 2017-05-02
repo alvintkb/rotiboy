@@ -1,0 +1,110 @@
+
+ 
+
+ 
+<ion-header no-border>
+ 
+<!--button  icon-only  (click)="toggle()" style="background-color:transparent;color:white; height:1px;width:1px; float: right;left:80%;top: 3%;position: fixed;">
+  <ion-icon name="md-cog"></ion-icon>
+</button-->
+
+ <ion-fab right>
+    <button ion-fab mini><ion-icon name="md-cog"></ion-icon></button>
+    <ion-fab-list>
+      <button (click)="gotoprofilepicture()" ion-fab><ion-icon name="person"></ion-icon></button>
+      <button (click)="logOut()" ion-fab><ion-icon name="md-exit"></ion-icon></button>
+    
+    </ion-fab-list>
+  </ion-fab>
+
+<div align="right">
+<div  id='mango' style="display:none;width:50%;" padding>
+<ion-list class="item-borderless">
+   <ion-item  class="col">
+   
+      <p class="b">Setting</p>
+        <button  icon-only  (click)="toggle()" style="background-color:transparent;color:white; height:1px;width:1px; float: right;left:63%;top: 3%;position: fixed;">
+  <ion-icon class="c" name="md-cog"></ion-icon>
+</button>
+    </ion-item>
+    
+     <ion-item  class="col" (click)="gotoprofilepicture()" no-lines>
+   
+        <p class="b">Edit Profile</p>
+    </ion-item>
+
+    <ion-item  *ngIf='_data.userid=="admin"' class="col" (click)="gotobf_feedback()" no-lines>
+           <p class="b">BF Feedback</p>
+    </ion-item>
+  <ion-item  *ngIf='_data.userid=="admin"' class="col" (click)="gotobf_crown()" no-lines>
+           <p class="b">BF Crown</p>
+    </ion-item>
+  <ion-item  *ngIf='_data.userid=="admin"' class="col" (click)="gotobf_message()" no-lines>
+           <p class="b">BF Message</p>
+    </ion-item>
+  <ion-item  *ngIf='_data.userid=="admin"' class="col" (click)="gotobf_Map()" no-lines>
+           <p class="b">BF Map</p>
+    </ion-item>
+     <ion-item  *ngIf='_data.userid=="admin"' class="col" (click)="gotobf_Deals()" no-lines>
+           <p class="b">BF Deals</p>
+    </ion-item>
+         <ion-item  *ngIf='_data.userid=="admin"' class="col" (click)="gotobf_Users()" no-lines>
+           <p class="b">BF Users</p>
+    </ion-item>
+        <ion-item  class="col" (click)="logOut()" no-lines>
+    
+            <p class="b">Logout</p>
+    </ion-item>
+    <ion-item class="col" (click)="toggle()" no-lines>
+      <p class="c">  <ion-icon name="close-circle"></ion-icon>
+       Close</p>
+    </ion-item>
+        <!--ion-item class="col" (click)="exitApp()">
+        <ion-icon name="md-close-circle"></ion-icon>
+         Exit App
+    </ion-item-->
+    </ion-list>
+ </div>
+</div>
+  
+<!--button  icon-only  (click)="toggle()" style="background-color:#702f21">
+ 
+  <ion-icon style="color:white;background-color:#702f21;border: 0" name="md-cog"></ion-icon>
+
+
+</button-->
+
+ 
+<!--div id='mango' style="display:none">
+<ion-list  class="popover-page">
+    <ion-item class="col" (click)="logOut()">
+      <ion-icon name="md-exit"></ion-icon>
+             Logout
+    </ion-item>
+     <ion-item class="col" (click)="gotoprofilepicture()">
+        <ion-icon name="md-person"></ion-icon>
+        Profile Picture
+    </ion-item>
+    </ion-list>
+ </div-->
+
+ <!--ion-fab right>
+    <button ion-fab mini><ion-icon name="md-cog"></ion-icon></button>
+    <ion-fab-list>
+      <button (click)="gotoprofilepicture()" ion-fab><ion-icon name="person"></ion-icon></button>
+      <button (click)="logOut()" ion-fab><ion-icon name="md-exit"></ion-icon></button>
+    
+    </ion-fab-list>
+  </ion-fab-->
+
+</ion-header>
+
+
+<ion-tabs  preloadTabs="false">
+  <div *ngFor="let tab of _data.tabs">
+  <ion-tab *ngIf="tab.title!='Message'" [root]="tab.root" [tabTitle]="tab.title" [tabIcon]="tab.icon"></ion-tab>
+  <!--ion-tab *ngIf="tab.title=='Message'" [root]="tab.root" [tabTitle]="tab.title" [tabIcon]="tab.icon" tabBadge={{tab.msgcount}}></ion-tab-->
+  </div>
+
+
+</ion-tabs>

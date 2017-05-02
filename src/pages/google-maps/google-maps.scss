@@ -1,0 +1,49 @@
+page-google-maps {
+div.apple {background-color:white;
+}
+#container {
+	
+  width: 100%;
+  height: 100%;
+ 
+  position: absolute;
+  margin: auto;
+  padding: 2px;
+}
+
+#infoi {
+ box-shadow: 10px 10px 5px #888888;
+	background-color:white;
+  margin: auto;
+  width: 90%;
+  height: 30%;
+  position: relative;
+  top: 66%;
+
+}
+#infoi {
+  z-index: 10;
+}
+
+ion-col.noselect{
+    background-color:white;
+    border-style: solid;
+    border-width: 0px 0px 0px 2px;
+    border-color:#EEEEEE;
+}
+.larger{
+font-size:30px;
+color:rgb(116,78,48);
+}
+
+
+
+ td.apple {
+   border-color:#cccccc; /*grey*/
+border-style:solid; 
+border-width:1px;
+padding: 15px;
+ border-radius: 125px;
+}
+}
+

@@ -1,0 +1,46 @@
+carouselpic{
+.carousel-container {
+  padding: 0em 0;
+  margin: 0 auto;
+  width: 13em;
+  position: relative;
+  perspective: 60em;
+
+}
+.carousel {
+
+  width: 100%;
+
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+    top:1em;
+}
+.carousel-slide-item {
+  display: block;
+  position: absolute;
+
+  width: 100%;
+ 
+  font-size: large;
+  text-align: center;
+  color: white;
+  opacity: 0.95;
+  border-radius: 10px;
+}
+div.box {
+   
+ 
+    width: 100%;
+ 
+}
+p{
+  font-size:15px
+}
+div.center {
+    display: block;
+  position:absolute;
+  top:10%;
+
+}
+}

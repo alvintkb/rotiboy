@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="secondary" >
+      <h5 ><font  face="Book Antigua">TRANSACTION HISTORY</font></h5 >
+
+   
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content  >
+    
+
+    <!--
+  <ion-card>
+    <ion-card-content>
+      <strong>Message</strong>: {{message}}
+    </ion-card-content>
+  </ion-card>
+  <strong>Direct Message, which comes from a direct reference to the DB child <em>static</em></strong>: {{direct}}
+  -->
+
+ 
+   
+  
+
+
+
+<ion-grid style="background-color:#C3B59B;">
+  <ion-row    >
+<ion-col width-50>Date</ion-col>
+<ion-col width-30>Type</ion-col>
+<ion-col width-20>Date</ion-col>
+<hr>
+</ion-row>
+<div  *ngFor="let item of items"  >
+<ion-row>
+<ion-col width-50>{{item.data.date}}</ion-col>
+<ion-col width-30></ion-col>
+<ion-col width-20></ion-col>
+</ion-row>
+
+<ion-row>
+<ion-col width-50>{{item.data.description}}</ion-col>
+<ion-col width-30>{{item.data.type}}</ion-col>
+<ion-col width-20>{{item.data.amount}}</ion-col>
+</ion-row>
+<hr>
+</div>
+</ion-grid>
+
+
+   
+ 
+</ion-content>

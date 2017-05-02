@@ -1,0 +1,37 @@
+<ion-header>
+ <ion-navbar color="primary" hideBackButton>
+      <credituser></credituser>
+   
+  </ion-navbar>
+  
+ 
+
+</ion-header>
+
+<ion-content style="background-color:#000022;" >
+     <!--
+  <ion-card>
+    <ion-card-content>
+      <strong>Message</strong>: {{message}}
+    </ion-card-content>
+  </ion-card>
+  <strong>Direct Message, which comes from a direct reference to the DB child <em>static</em></strong>: {{direct}}
+  -->
+
+ 
+   
+  
+
+<div style="background-color:#702f21" (click)="gotodeals_sub(item.data.subpage,items)" *ngFor="let item of items"  >
+   
+      <img src="{{item.data.URL}}" alt="Person" width=100% alt="Person" >
+<!--div class = 'f1' style="color:white" >{{item.data.title}}</div-->
+
+
+
+
+</div>
+
+
+ 
+</ion-content>

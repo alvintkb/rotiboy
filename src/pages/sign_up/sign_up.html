@@ -1,0 +1,85 @@
+<!--
+  Generated template for the Home page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <h5>ROYALTY ROTIBOY REWARD</h5>
+  </ion-navbar>
+ 
+</ion-header>
+
+
+<ion-content class="ion-content" padding>
+  <br/>
+<carousel [slides]="slides" (selectSlide)="selectProducer($event);" >
+
+</carousel>
+<br/>
+<br/>
+  <p>Terms and Conditions Apply<br/>
+ <input type="checkbox">I agreed to terms</p>
+ <br/>
+
+ <form [formGroup]="signupForm" (submit)="signupUser()" >
+
+   <h5 style="color:white">Fill in your details below to sign up:</h5>
+    
+        <ion-input #username formControlName="userid" type="text" placeholder="USER ID" >
+        </ion-input>
+
+        <ion-input #username formControlName="username" type="text" placeholder="NAME" >
+        </ion-input>
+        
+        <ion-input #dateofbirth formControlName="dateofbirth" type="text" placeholder="DATE OF BIRTH" 
+          [class.invalid]="!signupForm.controls.dateofbirth.valid && signupForm.controls.dateofbirth.dirty">
+        </ion-input>
+    
+  <!--ion-datetime displayFormat="MMM D, YYYY" pickerFormat="D MMM YYYY"
+        [(ngModel)]="dateofbirth" (ionChange)="updateDOB(dateofbirth)">
+        </ion-datetime-->
+
+      <ion-input #email formControlName="email" type="email" placeholder="EMAIL" 
+        [class.invalid]="!signupForm.controls.email.valid && signupForm.controls.email.dirty">
+        </ion-input>
+  
+    <ion-item class="error-message" 
+      *ngIf="!signupForm.controls.email.valid  && signupForm.controls.email.dirty">
+      <p>Please enter a valid email.</p>
+    </ion-item>
+
+     <ion-input #password formControlName="password" type="password" placeholder="PASSWORD" 
+        [class.invalid]="!signupForm.controls.password.valid && signupForm.controls.password.dirty">
+        </ion-input>
+ 
+    <ion-item class="error-message" 
+      *ngIf="!signupForm.controls.password.valid  && signupForm.controls.password.dirty">
+      <p>Your password needs more than 6 characters.</p>
+    </ion-item>
+
+    
+
+ <ion-input #passwordconfirm formControlName="passwordconfirm" type="text" placeholder="PASSWORD CONFIRM" >
+        </ion-input>
+        
+    <ion-item class="error-message" 
+      *ngIf="!signupForm.controls.dateofbirth.valid  && signupForm.controls.dateofbirth.dirty">
+      <p>Please enter a valid date.</p>
+    </ion-item>
+
+
+        <button class="large_button" block type="submit">
+        <img src="signup.svg" width="20%">
+    </button>
+  </form>
+
+   
+    
+
+ 
+
+
+</ion-content>

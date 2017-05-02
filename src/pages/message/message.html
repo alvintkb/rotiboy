@@ -1,0 +1,42 @@
+<!--
+  Generated template for the Message page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>  <ion-icon name="mail"></ion-icon>&nbsp;MESSAGES</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    
+  <ion-item  (click)="gotonews_sub(item.data.icon,item.data.contain,item.id)" style="background-color:rgba(0,0,0,0)" *ngFor="let item of trans ">
+    <ion-thumbnail item-left>
+    
+      <ion-icon *ngIf="item.isread!=true" name="mail"></ion-icon>
+      <ion-icon *ngIf="item.isread==true" name="mail-open"></ion-icon>
+    <img *ngIf="item.data.icon =='B'" class="left" height="42" width="42" src="birthday.svg" >
+    <img *ngIf="item.data.icon =='C'" class="left" height="42" width="42" src="cash-back.svg" >
+    <img *ngIf="item.data.icon =='E'" class="left" height="42" width="42" src="events.svg" >
+    <img *ngIf="item.data.icon =='P'" class="left" height="42" width="42" src="promotion.svg" >
+    <img *ngIf="item.data.icon =='V'" class="left" height="42" width="42" src="voucher-icon.svg" >     
+    </ion-thumbnail>
+    <h2 style="color:white">{{item.data.title}}</h2>
+    <p class="p" *ngIf="item.data.icon =='B'">Birthday Gifts</p>
+    <p class="p" *ngIf="item.data.icon =='V'">Bonus credits with voucher purchase</p>
+    <p class="p" *ngIf="item.data.icon =='C'">Cash back with purchases</p>
+    <p class="p" *ngIf="item.data.icon =='P'">Exclusive promotions</p>
+    <p class="p" *ngIf="item.data.icon =='E'">Exclusive invitation to ROTIBOY events</p>
+    <button ion-button clear item-right><ion-icon name="ios-arrow-forward-outline" item-right></ion-icon></button>
+  </ion-item>
+
+
+</ion-list>
+</ion-content>
+

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Photo</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+
+
+  <div>
+<ion-list>
+<ion-item>
+
+<img style="max-width:60%" src="_data.photoURL" *ngIf="!photoTaken && !photoSelected ">
+<img [src]="_data.photoURL" *ngIf="photoTaken">
+<img [src]="cameraUrl" *ngIf="photoSelected">
+
+</ion-item>
+
+<ion-item (click)="openCamera()" class="col">
+Take Photo
+<ion-icon name="md-arrow-dropright-circle" item-right> </ion-icon>
+</ion-item>
+
+<ion-item (click)="selectFromGallery()" class="col">
+Choose photo from
+<ion-icon name="md-arrow-dropright-circle" item-right> </ion-icon>
+</ion-item>
+</ion-list>
+</div>
+
+</ion-content>

@@ -1,0 +1,65 @@
+page-login {
+  form {
+    margin-bottom: 0px;
+    button {
+      margin-top: 0px;
+    }
+  }
+
+  p {
+    font-size: 0.8em;
+    color: #ffffff;
+  }
+
+  .font {
+    color: #ffffff;
+  }
+  ion-label {
+    margin-left: 5px;
+  }
+
+  ion-input {
+    padding: 5px;
+  }
+
+  .invalid {
+    border-bottom: 1px solid #FF6153;
+  }
+
+  .error-message .item-inner {
+    border-bottom: 0 !important;
+  }
+.meme{
+
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color:transparent;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+ 
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.item {
+ 
+
+   
+    padding: 5%;
+}
+
+ion-input {
+    background-color: rgba(0, 0, 0, 0);
+    color:white;
+    width: 100%;
+ 
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+}

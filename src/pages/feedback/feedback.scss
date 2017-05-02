@@ -1,0 +1,33 @@
+page-feedback {
+ion-col.noselect{
+color:white;
+background-color:rgba(0,0,0,0);
+   border-style: solid;
+    border-width: 0px 0px 0px 2px;
+    border-color:#D5B114;
+    
+
+}
+ion-col.select{
+background-color:rgba(0,0,0,0);
+  color:#603814;
+  font-weight: bold;
+
+
+}
+textarea{
+background-color:#FFFABC;
+width:100%;
+}
+ion-textarea{
+    background-color:#FFFABC;
+width:100%;
+}
+P{
+    color:white;
+    font-size: 0.8em;
+}
+h6{
+    color:white;
+}
+}

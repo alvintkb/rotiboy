@@ -1,0 +1,28 @@
+page-deals {
+div.f1 { color: white;float: left; width: 100%;font-size:12px; }
+div.f2 { float: left; }
+div.f2 { float: right; }
+div.f3 { clear: both; }
+
+.grad3 {
+  
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#00FF00,green); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#00FF00, green); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#00FF00, green); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#00FF00, green); /* Standard syntax (must be last) */
+}
+
+.w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important}
+div.spacer
+{
+    font-size: 0; 
+   
+    line-height: 0;
+    
+}
+
+
+
+
+}

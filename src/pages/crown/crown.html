@@ -1,0 +1,63 @@
+<!--
+  Generated template for the Account page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> Account</ion-title>
+       <ion-buttons end>
+      <button ion-button icon-only (click)="addSong()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+   <ion-item>
+   <ion-input class="col" type="text" name="query" [(ngModel)]="querystr" placeholder="UID" ></ion-input>
+
+   </ion-item>
+     <ion-button (click)="query()" class="col">Find</ion-button>
+  <ion-grid>
+      <ion-row style="color:white;background-color:#f1c40f;" >
+      <ion-col style="border: 1px solid;border-color:#eeeeee" width-25>
+                   Date
+      </ion-col>
+      <ion-col style="border: 1px solid;border-color:#eeeeee" width-50>
+                   Description
+      </ion-col>
+      <ion-col style="border: 1px solid;border-color:#eeeeee" width-25>
+                   Amount
+      </ion-col>
+      </ion-row>
+  <ion-row  *ngFor="let item of trans | async" (click)="showOptions(item.$key, item.date,item.description,item.amount)">
+      <ion-col class="col" width-25 >
+                   {{item.date}}
+      </ion-col>
+      <ion-col class="col" width-50>
+                   {{item.description}}
+      </ion-col>
+      <ion-col class="col" [style.color]="getcolor(item.amount)"  width-25 text-right>
+                   {{   format2dec(item.amount)}}
+      </ion-col>
+      </ion-row>
+  <ion-row  >
+      <ion-col style="border: 1px solid;border-color:#eeeeee" width-25>
+                   
+      </ion-col>
+      <ion-col style="border: 1px solid;border-color:#eeeeee" width-50 text-right>
+                 Total:
+      </ion-col>
+      <ion-col style="border: 1px solid;border-color:#eeeeee" width-25 text-right style="background-color: lightgrey;border: 2px solid;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+                {{total.toFixed(2)}}
+      </ion-col>
+      </ion-row>
+
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,42 @@
+page-msg_sub {
+p {color:#FFFABC;
+  font-size: 200%;
+}
+
+div.spacer
+{
+    font-size: 0; 
+    height:6%;
+    line-height: 0;
+}
+ion-col.noselect{
+color:white;
+background-color:#603814;
+   border-style: solid;
+    border-width: 0px 0px 0px 2px;
+    border-color:#D5B114;
+    
+
+}
+ion-col.select{
+background-color:rgba(0,0,0,0);
+  color:#603814;
+  font-weight: bold;
+
+
+}
+
+textarea {
+    background-color: rgb(139,94,59);
+    color:white;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+}
+

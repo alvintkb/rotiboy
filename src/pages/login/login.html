@@ -1,0 +1,55 @@
+
+
+<ion-content padding>
+<div align="center">
+         <img src="assets/images/rotiboylogo.svg" width="35%" />
+
+ </div>
+
+  <form  [formGroup]="loginForm"  novalidate>
+  
+ <p>User ID</p>
+     <!--ion-input  #email formControlName="email"  placeholder="User ID"></ion-input-->
+
+      <ion-input  #email formControlName="email" type="email" placeholder="User ID" 
+        [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>
+      <ion-item class="error-message" 
+      *ngIf="!loginForm.controls.email.valid  && loginForm.controls.email.dirty">
+      <p>Please enter a valid User ID.</p>
+    </ion-item>
+
+     <p>Password</p>
+  
+ 
+      <ion-input  #password formControlName="password" type="password" placeholder="Your password" 
+        [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>
+  
+    <ion-item class="error-message" 
+      *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">]
+      <p>Your password needs more than 6 characters.</p>
+    </ion-item>
+
+  <ion-grid>
+              <ion-row>
+                  <ion-col class="item">
+        
+              <img  (click)='goToSignup()' height="80em" width="80em"src="signup.svg">
+                 </ion-col>
+                 <ion-col class="item">
+                   
+              <img (click)="loginUser()"  height="80em" width="80em" src="login.svg" align=right>
+          </ion-col>
+            </ion-row>
+             </ion-grid>
+
+ 
+
+  </form>
+
+    
+
+    <button ion-button block (click)="goToResetPassword()">
+      I forgot my password
+    </button>
+
+</ion-content>

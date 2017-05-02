@@ -1,0 +1,90 @@
+<ion-header>
+   <ion-navbar color="primary" hideBackButton>
+     <div >
+       <ion-icon  (click)="goto_message()" class="card__text5" style="color:white;font-size: 200%;" name="mail" ></ion-icon>
+
+        <ion-badge class="card__text6"  item-left>{{msgcount}}</ion-badge>
+    </div>
+  <ion-card-content>
+      <span>       0.0.0.18</span>
+    </ion-card-content>
+     <!--button full ion-button (click)="checkForUpdate()">Check for Updates</button-->
+  </ion-navbar>
+ </ion-header>
+
+<ion-content padding>
+    <div>
+
+          <img color="white" src="RRotiboyLogo.svg" alt="Lights" height="autox" width="20%">
+      <div class="card effect__click">
+        <div class="card__front" style="background-color:rgba(0,0,0,0)">
+          <img src="cardfront.svg" alt="Lights" height="autox" width="100%">
+          <img class="card__text4"  [src]="_data.photoURL">
+
+          <span class="card__text">1023 4345 1177</span>
+          <span class="card__text2">{{_data.user}}</span>
+        </div>
+
+        <div class="card__back" style="background-color:rgba(0,0,0,0)">
+    <qr-code  class="card__text3" [value]="'All QR Code data goes here!'" [size]="116"></qr-code>
+
+          <img src="cardback.svg" height="auto" width="100%">
+       
+        </div>
+      </div>
+          <ion-grid>
+  <ion-row>
+    <ion-col class="aaa2" style="color:#FFFFB2;background-color:rgba(0,0,0,0)"  width-70>
+       <button style="color:#FFFFB2;background-color:rgba(0,0,0,0)" ion-button outline item-right icon-left>
+      CROWN<br/>712
+        </button>
+      </ion-col>
+     
+           <ion-col class="aaa" style="color:#FFFFB2;background-color:rgba(0,0,0,0)" width-70>
+           <button style="color:#FFFFB2;background-color:rgba(0,0,0,0)" (click)="gototranhis()" ion-button outline item-right icon-left>
+           TRANSACTION<br/> HISTORY
+           </button>
+        </ion-col>
+</ion-row>
+
+</ion-grid>
+    </div>
+
+        <ion-grid>
+    
+  <ion-row>
+    <ion-col style="color:#FFFFB2;background-color:rgba(0,0,0,0)"  width-40> <strong>PERPETUAL CROWN
+          </strong></ion-col>
+       <ion-col style="color:#FFFFB2;background-color:rgba(0,0,0,0)"    width-60>
+356
+        
+        </ion-col>
+</ion-row>
+<hr>
+<ion-row>
+    <ion-col style="color:#FFFFB2;background-color:rgba(0,0,0,0)"  width-40> <strong>USED CROWN
+          </strong></ion-col>
+       <ion-col style="color:#FFFFB2;background-color:rgba(0,0,0,0)"    width-60>
+356
+        
+        </ion-col>
+         
+</ion-row>
+  <hr>
+<ion-row>
+    <ion-col style="color:#FFFFB2;background-color:rgba(0,0,0,0)" width-40> <strong>EXPIRING CROWN
+          </strong></ion-col>
+       <ion-col style="color:#FFFFB2;background-color:rgba(0,0,0,0)"    width-60>
+356
+        
+        </ion-col>
+       
+</ion-row>
+     <hr> 
+</ion-grid>
+
+
+</ion-content>
+
+
+

@@ -1,0 +1,108 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+$font-path: "../assets/fonts";
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+
+$text-color:        #000;
+$background-color:  #fff;
+
+$font-family-ios-base: "Century Gothic", -apple-system, "Helvetica Neue", "Roboto", sans-serif;
+$font-family-md-base: "Century Gothic", "Roboto", "Helvetica Neue", sans-serif;
+$font-family-wp-base: "Century Gothic", "Segoe UI", "Noto Sans", sans-serif;
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+//  primary:    #387ef5,
+  //primary:    rgb(116,78,48),
+  primary:    rgb(96,56,19),
+  secondary:  rgb(192,181,155),
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  favorite:   #69BB7B
+);
+
+.g-background {
+  color : #fff;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e3d994+0,c98d51+25,702f21+71,3b241e+100 */
+background: #e3d994; /* Old browsers */
+background: -moz-linear-gradient(top, #e3d994 0%, #c98d51 25%, #702f21 71%, #3b241e 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #e3d994 0%,#c98d51 25%,#702f21 71%,#3b241e 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #e3d994 0%,#c98d51 25%,#702f21 71%,#3b241e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3d994', endColorstr='#3b241e',GradientType=0 ); /* IE6-9 */
+  }
+
+.content-md {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e3d994+0,c98d51+25,702f21+71,3b241e+100 */
+background: #e3d994; /* Old browsers */
+//background: -moz-linear-gradient(top, #e3d994 0%, #c98d51 25%, #702f21 71%, #3b241e 100%); /* FF3.6-15 */
+//background: -webkit-linear-gradient(top, #e3d994 0%,#c98d51 25%,#702f21 71%,#3b241e 100%); /* Chrome10-25,Safari5.1-6 */
+//background: linear-gradient(to bottom, #e3d994 0%,#c98d51 25%,#702f21 71%,#3b241e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background: -moz-linear-gradient(top, rgb(106,70,45), rgb(96,56,19) 10%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,rgb(106,70,45),rgb(96,56,19) 10%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,rgb(106,70,45),rgb(96,56,19) 10%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3d994', endColorstr='#3b241e',GradientType=0 ); /* IE6-9 */
+
+}
+
+//$colors: (
+//  primary:    #702f21,
+//  secondary:  #603913,
+//  danger:     #f53d3d,
+//  light:      #f4f4f4,
+//  dark:       #222
+//);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+$ionicons-font-path: "../assets/fonts";
+@import "ionicons";
