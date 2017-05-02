@@ -70,6 +70,7 @@ export class MyApp {
 							this._data.userid = user.displayName;
 							this._data.birthDate = snapshot.val().dateofbirth;
 							this._data.email = snapshot.val().email;
+							this._data.displayName = snapshot.val().displayName;
 							if ((snapshot.val().photoURL !== "www.photo.com") && (snapshot.val().photoURL !== null))
 								this._data.photoURL = snapshot.val().photoURL;
 							else

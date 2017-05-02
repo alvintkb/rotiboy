@@ -66,7 +66,7 @@ ionViewLoaded()
 
   getDeviceDetails(){
       var deviceID = Device.uuid;
-      var string = Device.version; 
+   //   var string = Device.version; 
       console.log(deviceID );
    }
 

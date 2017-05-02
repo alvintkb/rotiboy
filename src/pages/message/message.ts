@@ -4,7 +4,7 @@ import { DataService } from '../../providers/data/data.service';
 import { Msg_subPage } from '../msg_sub/msg_sub';
 
 import { Storage } from '@ionic/storage';
-import {AngularFire, FirebaseListObservable} from 'angularfire2';
+import {AngularFire} from 'angularfire2';
 /*
   Generated class for the Message page.
 
@@ -77,7 +77,7 @@ this._cd.detectChanges();
 gotonews_sub(icon:string,page:string,id:string)
 {
 this._data.updateDataObs_isread_true('message',id);
-var index = this._data.tabs.map(function(d) { return d['title']; }).indexOf('Message');
+//var index = this._data.tabs.map(function(d) { return d['title']; }).indexOf('Message');
 var ui = this._data.msgcount;
 console.log('ppppp');
 console.log(ui);

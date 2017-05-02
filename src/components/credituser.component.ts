@@ -21,7 +21,11 @@ export class Credituser {
  // console.log(user);
  // if (user)
   //  this.displayname = user.displayName;
-this.displayname = _data.userid;
+this.displayname = _data.displayName.split(' ').map(w => w[0].toUpperCase() + w.substr(1).toLowerCase())
+   .join(' ')
+
+
+
  //firebase.auth().onAuthStateChanged((user)=>{
   // if (user)
   // {

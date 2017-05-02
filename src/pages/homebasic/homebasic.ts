@@ -2,11 +2,11 @@ import { Component, ChangeDetectorRef  } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { PopoverController } from 'ionic-angular';
 import { TransactionPage } from '../transaction/transaction';
-import { MessagePage } from '../message/message';
+//import { MessagePage } from '../message/message';
 import { DataService } from '../../providers/data/data.service';
 import {Deploy} from "@ionic/cloud-angular";
 import {LoadingController, ToastController} from "ionic-angular";
-import { CollapseDirective } from 'ng2-bootstrap'
+//import { CollapseDirective } from 'ng2-bootstrap'
 
 
  @ Component({
@@ -35,13 +35,13 @@ export class HomebasicPage {
 
 	gogo = () => this.nav.push(TransactionPage);
 	
-	private downloadAndInstall() {
-		const updating = this.loadingCtrl.create({
-				content: 'Updating application...'
-			});
-		updating.present();
-		this.deploy.download().then(() => this.deploy.extract()).then(() => this.deploy.load());
-	}
+	//private downloadAndInstall() {
+	//	const updating = this.loadingCtrl.create({
+	//			content: 'Updating application...'
+	//		});
+	//	updating.present();
+	//	this.deploy.download().then(() => this.deploy.extract()).then(() => this.deploy.load());
+	//}
 
 	onPageDidEnter() {
 		console.log("Dashboard page load event fired.");

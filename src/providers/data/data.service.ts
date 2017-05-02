@@ -21,6 +21,7 @@ export class DataService {
     public userid:string;
     public birthDate:string;
     public email:string;
+    public displayName:string;
     public isonline:boolean;
   //   public msgcount$=null;
 

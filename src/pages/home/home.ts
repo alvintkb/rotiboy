@@ -72,7 +72,8 @@ export class HomePage {
 			} else {
 				//   checking.dismiss();
 				const toast = this.toastCtrl.create({
-						message: 'Welcome to ROTIBOY',
+						message: 'Welcome '  + this._data.displayName.split(' ').map(w => w[0].toUpperCase() + w.substr(1).toLowerCase())
+   .join(' '), 
 						position: 'top',
 						duration: 3000
 					});
@@ -96,6 +97,7 @@ export class HomePage {
 		if (this._data.photoURL == null)
 			this._data.photoURL = "img_avatar3.png";
 		console.log('**did enter**');
+
 
 	}
 	ionViewWillEnter() {
